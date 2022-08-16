@@ -1,0 +1,16 @@
+@using hello_asp.Models
+@model hello_asp.Models.ProductModel
+
+@{
+     var product = ViewData["product"] as ProductModel;
+}
+@{
+    Layout = "_Layout";
+    
+}
+<p>@ViewData["Title"]</p>
+<div style="background-color: white-smoke; ">
+    <h1>@product.Name</h1>
+    <p>Gia: @product.Price</p>
+</div>
+@this.Path
